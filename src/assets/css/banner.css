@@ -1,0 +1,270 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+}
+.banner-slider {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.banner-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-image {
+  width: 100%;
+  height: 70vh;
+  object-fit:cover;
+  border-radius: 8px;
+}
+.banner-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+.banner-content .who-we-are {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.intro-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .banner-content .who-we-are,
+  .banner-content .intro-video {
+    text-align: center;
+  }
+
+  .who-we-are {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .banner-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .banner-image {
+    max-height: 300px;
+  }
+
+  .who-we-are {
+    font-size: 16px;
+  }
+  .slick-slide img{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    max-height: 250px;
+  }
+
+  .banner-content .who-we-are {
+    font-size: 14px;
+  }
+}
+.intro-video {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.intro-video video {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.play-button::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #ffffff;
+}
+.intro-video video.playing + .play-button {
+  display: none;
+}
+.secondSection{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 30px;
+  border: solid rgb(159, 18, 18) 30px;
+}
+.who-we-are, .intro-video {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .intro-video {
+    aspect-ratio: 4 / 3;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-button::before {
+    border-width: 8px 0 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-video {
+    aspect-ratio: 1 / 1;
+  }
+
+  .play-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-button::before {
+    border-width: 6px 0 6px 12px;
+  }
+}
+
+.secondSection {
+  display: block; 
+  margin: auto;
+  padding: 30px;
+  border: solid rgb(159, 18, 18) 30px;
+}
+
+@media (min-width: 768px) {
+  .secondSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .secondSection {
+    padding: 50px;
+    max-width: 1200px;
+  }
+}
+.secondSection {
+  position: relative;
+  margin-top: 20px;
+  border: solid 10px rgb(159, 18, 18);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+}
+.placeholder-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.banner-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.placeholder-text {
+  width: 80%;
+  height: 18px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.placeholder-text.large {
+  width: 90%;
+  height: 24px;
+}
+
+.placeholder-video {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  animation: shimmer 1.5s linear infinite;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}

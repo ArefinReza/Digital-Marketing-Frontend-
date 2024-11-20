@@ -1,0 +1,115 @@
+.reviewfull-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .reviewfull-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .reviewfull-header h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .reviewfull-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .reviewfull-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .reviewfull-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .reviewfull-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(245, 245, 245, 0.9);
+  }
+  
+  .reviewfull-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .reviewfull-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .reviewfull-content h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .reviewfull-content p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .reviewfull-rating {
+    color: #f39c12;
+    font-size: 1rem;
+  }
+  
+  /* Modal Styles */
+  .reviewfull-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  
+  .reviewfull-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .reviewfull-modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 1024px) {
+    .reviewfull-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .reviewfull-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

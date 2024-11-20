@@ -1,0 +1,137 @@
+.contact-container {
+  padding-inline: 20px;
+  padding-bottom: 30px;
+}
+.cont{
+  text-align: center;
+  font-size: 37px;
+  padding: 15px;
+  color: #333;
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 88%;
+}
+
+.contact-image{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-form h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+  font-size: large;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid transparent; 
+  font-size: 1rem;
+  background-color: transparent;
+  position: relative;
+  outline: none; 
+  transition: border-color 0.3s ease;
+  color: #266867;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  border-color: #227773;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: #3aafa9;
+  
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+
+.submit-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 23px;
+  background-color: #266867;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  height: 100%;
+  background-color: #3aafa9;
+  transition: left 0.3s ease; 
+  z-index: 0; 
+}
+
+.submit-btn:hover::before {
+  left: 0;
+}
+
+.submit-btn:hover {
+  color: white; 
+}
+
+.submit-btn span {
+  position: relative;
+  z-index: 1; 
+}
+
+.contact-image h1{
+  padding-inline: 25px;
+  font-size:xx-large;
+  color: #333;
+}
+.contact-image p{
+  padding-inline: 20px;
+  font-size:large;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    
+    display: block;
+  }
+
+  .contact-form {
+    padding: 15px;
+    margin: auto;
+    
+  }
+  .contact-form input, .contact-container textarea{
+    width: 90%;
+  }
+}
